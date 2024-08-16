@@ -1,0 +1,11 @@
+import { UpdateMeBodyType } from '@/schemaValidations/account.schema';
+import { AccountResType, ChangePasswordBodyType } from './../../../template/src/schemaValidations/account.schema';
+import http from "@/lib/http"
+
+const accountApiRequest = {
+    me: () => http.get<AccountResType>('/accounts/me'),
+    updateMe:(body:UpdateMeBodyType) => http.put<AccountResType>('/accounts/me', body),
+    changePassword: (body: ChangePasswordBodyType)=> http.put<AccountResType>('/accounts/change-password', body)
+}
+
+export default accountApiRequest
