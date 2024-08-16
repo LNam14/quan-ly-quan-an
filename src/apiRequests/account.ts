@@ -1,5 +1,4 @@
-import { UpdateMeBodyType } from '@/schemaValidations/account.schema';
-import { AccountResType, ChangePasswordBodyType } from './../../../template/src/schemaValidations/account.schema';
+import { AccountResType, ChangePasswordBodyType, UpdateMeBodyType } from '@/schemaValidations/account.schema';
 import http from "@/lib/http"
 
 const accountApiRequest = {
