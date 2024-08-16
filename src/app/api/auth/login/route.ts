@@ -1,9 +1,10 @@
-import { HttpError } from './../../../../../../template/src/lib/http';
+
 import authApiRequest from '@/apiRequests/auth';
 import { cookies } from 'next/headers';
 import { LoginBodyType } from './../../../../../../template/src/schemaValidations/auth.schema';
 import jwt from "jsonwebtoken"
 import { NextResponse } from 'next/server';
+import { HttpError } from '@/lib/http';
 export async function POST(request:Request){
     const body = (await request.json()) as LoginBodyType
     const cookieStore = cookies()

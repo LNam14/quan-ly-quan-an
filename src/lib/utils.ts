@@ -1,8 +1,9 @@
-import { EntityError } from './../../../template/src/lib/http';
+
 import { UseFormSetError } from 'react-hook-form';
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { toast } from '@/components/ui/use-toast';
+import { EntityError } from './http';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
